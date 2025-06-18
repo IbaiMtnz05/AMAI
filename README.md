@@ -4,14 +4,14 @@
 
 ## What is AMAI?
 
-AMAI is a project dedicated to building an AI-powered malware detector.  
-Our main objective is to collect real malware samples, preprocess them, and train models capable of detecting malicious software automatically.
+AMAI is my personal project focused on building an AI-powered malware detector.  
+My main goal is to collect real malware samples, preprocess them, and train models capable of automatically detecting malicious software.
 
 ---
 
-## How do we get real malware samples?
+## How do I get real malware samples?
 
-We leverage public and trusted sources such as **MalwareBazaar**, which provides daily updated malware samples packed in `.zip` files accessible via a public index.
+I use public and trusted sources such as **MalwareBazaar**, which provides daily updated malware samples packed in `.zip` files accessible via a public index.
 
 > [!TIP]  
 > The `.zip` files are usually password-protected with the password: `infected`.
@@ -24,55 +24,50 @@ We leverage public and trusted sources such as **MalwareBazaar**, which provides
 ## Process to extract and prepare samples
 
 1. **Automatic download:**  
-   Fetch `.zip` archives from the public MalwareBazaar index containing recent malware.
+   I fetch `.zip` archives from the public MalwareBazaar index containing recent malware samples.
 
 2. **Decompression:**  
-   Extract the archives using the known password to access raw malware executables.
+   I extract the archives using the known password to access raw malware executables.
 
 3. **Organized storage:**  
-   Store samples locally in clearly labeled folders for clean management.
+   Samples are stored locally in clearly labeled folders for easy management.
 
 4. **Preprocessing:**  
-   Extract meaningful features such as static attributes (PE headers, imported functions, strings) or dynamic behavior (sandbox execution traces) to convert raw binaries into structured data for AI models.
+   I extract meaningful features such as static attributes (PE headers, imported functions, strings) or dynamic behavior (sandbox execution traces) to convert raw binaries into structured data suitable for AI models.
 
 > [!NOTE]  
-> Proper preprocessing greatly enhances detection accuracy by feeding relevant features to the AI instead of raw bytes.
+> Proper preprocessing greatly improves detection accuracy by feeding relevant features to the AI instead of raw bytes.
 
 ---
 
 ## Benefits of this approach
 
-- Access to a constantly updated set of real malware samples.  
-- Fully automated pipeline to reduce manual overhead.  
-- Safe handling through isolation.  
-- A solid foundation to build and improve machine learning/AI malware detectors.
+- Access to a constantly updated collection of real malware samples.  
+- A fully automated pipeline that reduces manual effort.  
+- Safe handling by working in isolated environments.  
+- A solid foundation to develop and improve machine learning and AI-based malware detectors.
 
 > [!WARNING]  
-> Handling malware is inherently risky. Always ensure your environment is secured and backups exist.
+> Handling malware is inherently risky. Always ensure your environment is secure and backups are in place.
 
 ---
 
 ## Next steps & roadmap
 
-- Integrate dynamic sandbox analysis to capture runtime behaviors.  
+- Integrate dynamic sandbox analysis to capture runtime behavior.  
 - Develop automated feature extraction scripts.  
 - Train and fine-tune machine learning and deep learning models.  
 - Deploy a real-time detection system with alert capabilities.
 
 > [!IMPORTANT]  
-> Contributions and improvements are welcome! Please follow best security practices when working with malware.
+> I welcome feedback and improvements! Please always follow best security practices when working with malware.
 
 ---
 
-## Getting started
+## About this project
 
-To get up and running with AMAI:
+This project is developed **mainly for learning and personal experimentation** in malware analysis and AI.  
+If I find that it has potential and interest, I plan to continuously improve and expand its capabilities.
 
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/amai.git
-
-# Navigate into the project directory
-cd amai
-
-# Follow the setup and usage instructions in the docs folder (or wiki)
+> [!NOTE]  
+> AMAI is a work in progress and is not yet ready for production use. Use it responsibly and always in isolated environments.
